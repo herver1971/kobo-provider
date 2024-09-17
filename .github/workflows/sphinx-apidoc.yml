@@ -54,6 +54,7 @@ jobs:
     - name: Build .mo files
       run: |
         sphinx-intl build
+        touch i18n/locale/.gitkeep
 
     # 9. Commit and push the generated documentation and translation files
     - name: Commit and push changes
