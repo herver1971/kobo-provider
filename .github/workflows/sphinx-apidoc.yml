@@ -60,7 +60,7 @@ jobs:
       run: |
         git config --global user.name 'github-actions[bot]'
         git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-        git add docs/_build/html docs/*.rst locale
+        git add docs/_build/html docs/*.rst locale locale/en/LC_MESSAGES locale/es/LC_MESSAGES
         git commit -m "Auto-update documentation and translation files"
         git push
       env:
