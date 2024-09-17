@@ -42,7 +42,7 @@ jobs:
      # 6. Generate .pot files for i18n
     - name: Generate .pot files
       run: |
-        sphinx-build -b gettext docs i18n/pot
+        sphinx-build -b gettext language='en' docs i18n/pot
 
     # 7. Update .po files for translation
     - name: Update .po files
@@ -60,7 +60,7 @@ jobs:
       run: |
         git config --global user.name 'github-actions[bot]'
         git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-        git add docs/_build/html docs/*.rst i18n locale/en/LC_MESSAGES locale/es/LC_MESSAGES
+        git add docs/_build/html docs/*.rst i18n/pot locales/en/LC_MESSAGES locales/es/LC_MESSAGES
         git commit -m "Auto-update documentation and translation files"
         git push
       env:
