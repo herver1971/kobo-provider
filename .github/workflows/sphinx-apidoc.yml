@@ -42,7 +42,7 @@ jobs:
      # 6. Generate .pot files for i18n
     - name: Generate .pot files
       run: |
-        sphinx-build -b gettext -D language='en' docs i18n/pot
+        sphinx-build -b gettext -D language='en' . i18n/pot
 
     # 7. Update .po files for translation
     - name: Update .po files
@@ -54,7 +54,6 @@ jobs:
     - name: Build .mo files
       run: |
         sphinx-intl build
-        touch i18n/locale/.gitkeep
 
     # 9. Commit and push the generated documentation and translation files
     - name: Commit and push changes
