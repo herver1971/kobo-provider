@@ -35,7 +35,7 @@ templates_path = ['_templates']
 exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 
 language = 'en'
-locale_dirs = ['locale/']   # directorio que contiene los archivos de traducción
+locale_dirs = ['docs/locale/']   # directorio que contiene los archivos de traducción
 gettext_compact = False      # para evitar la compresión de mensajes en un solo archivo
 
 # -- Options for HTML output -------------------------------------------------
