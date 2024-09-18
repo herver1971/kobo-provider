@@ -42,13 +42,13 @@ jobs:
      # 6. Generate .pot files for i18n
     - name: Generate .pot files
       run: |
-        sphinx-build -b gettext docs i18n/pot
+        sphinx-build -b gettext docs docs/i18n/pot
 
     # 7. Update .po files for translation
     - name: Update .po files
       run: |
-        sphinx-intl update -p i18n/pot -l en
-        sphinx-intl update -p i18n/pot -l es
+        sphinx-intl update -p docs/i18n/pot -l en
+        sphinx-intl update -p docs/i18n/pot -l es
 
     # 8. Build .mo files
     - name: Build .mo files
